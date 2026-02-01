@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLUORITE | System Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+</head>
+<body>
+
+    <div id="videoModal" class="video-overlay hidden">
+        <div class="video-container">
+            <div class="video-header">
+                <span id="nowPlaying">STREAMING_LINK_ESTABLISHED</span>
+                <button onclick="closePlayer()" class="close-video">CLOSE_STREAM [×]</button>
+            </div>
+            <video id="player" playsinline controls>
+                <source src="" type="video/mp4" />
+            </video>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo" onclick="showHome()">FLUORITE</h1>
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="SEARCH_DATABASE...">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-wrapper">
+        
+        <section id="homeView">
+            <div class="section-header">
+                <span class="indicator"></span>
+                <h2>ACTIVE_PROJECTS.LOG</h2>
+            </div>
+            <div id="animeGrid" class="grid-container">
+                </div>
+        </section>
+
+        <section id="detailView" class="hidden">
+            <button onclick="showHome()" class="btn-back">← RETURN_TO_HOME</button>
+            <div id="animeDetailContent" class="detail-container">
+                </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
